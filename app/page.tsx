@@ -1,7 +1,9 @@
 'use client';
 
 import React from 'react';
-import PianoRoll from '../components/PianoRoll';
+import dynamic from 'next/dynamic';
+
+const PianoRoll = dynamic(() => import('../components/PianoRoll'), { ssr: false });
 
 export default function Home() {
   return (
