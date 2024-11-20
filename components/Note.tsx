@@ -1,3 +1,5 @@
+'use client';
+// Rest of your imports...
 // components/Note.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';

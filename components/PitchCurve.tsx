@@ -1,6 +1,11 @@
+'use client';
+// Rest of your imports...
 // components/PitchCurve.tsx
 import React from 'react';
-import { Line, Circle } from 'react-konva';
+import dynamic from 'next/dynamic';
+
+const Line = dynamic(() => import('react-konva').then((mod) => mod.Line), { ssr: false });
+const Circle = dynamic(() => import('react-konva').then((mod) => mod.Circle), { ssr: false });
 import { NoteData } from '../types';
 
 interface PitchCurveProps {

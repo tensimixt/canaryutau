@@ -1,3 +1,5 @@
+'use client';
+// Rest of your imports...
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 
