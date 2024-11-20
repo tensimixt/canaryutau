@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
-import { Stage, Layer, Rect, Line, Text } from 'react-konva';
+import dynamic from 'next/dynamic';
+
+const Stage = dynamic(() => import('react-konva').then((mod) => mod.Stage), { ssr: false });
+const Layer = dynamic(() => import('react-konva').then((mod) => mod.Layer), { ssr: false });
+const Rect = dynamic(() => import('react-konva').then((mod) => mod.Rect), { ssr: false });
+const Line = dynamic(() => import('react-konva').then((mod) => mod.Line), { ssr: false });
+const Text = dynamic(() => import('react-konva').then((mod) => mod.Text), { ssr: false });
+
+
+
 import Note from './Note';
 import { NoteData } from '../types';
+
+
 
 const PianoRoll: React.FC = () => {
   // Constants
