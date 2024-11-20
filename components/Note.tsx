@@ -1,6 +1,8 @@
 // components/Note.tsx
 import React from 'react';
-import { Rect } from 'react-konva';
+import dynamic from 'next/dynamic';
+const Rect = dynamic(() => import('react-konva').then((mod) => mod.Rect), { ssr: false });
+const Line = dynamic(() => import('react-konva').then((mod) => mod.Line), { ssr: false });
 import PitchCurve from './PitchCurve';
 import { NoteData } from '../types';
 
